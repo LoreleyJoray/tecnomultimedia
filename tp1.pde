@@ -1,4 +1,3 @@
-
 PImage imagen0,imagen1,imagen2,imagen3,imagen4,imagen5,imagen6, imagen7,imagen8;
 PFont fuente1, fuente2;
 int velX, velY, posX, posY;
@@ -39,6 +38,7 @@ void setup(){
    
     if (key == ' '){  //Reinicio
      pantalla = 0;
+     contador = 0;
     }
 
     
@@ -52,7 +52,7 @@ void setup(){
      posY-=velY;
      image (imagen1,0,0,width/2, 500);   
      image(imagen8,mouseX, mouseY);
-     text( text1,width/2,posY); 
+     text( text1,height/2, posY);
      
   }
    if (pantalla == 2){ 
@@ -70,27 +70,30 @@ void setup(){
      image (imagen3,width/3.3,0,width/1.4, 500);
      image(imagen8,mouseX, mouseY);
      fill(255);
-     text( text3,10,height/2);
+     text( text3,10,height/1.4);
       }
    if (pantalla == 4){
    background (255);
      image (imagen4,0,0,width/2, 500);   
      image(imagen7,mouseX, mouseY);
+     fill (0);
+      text( text4,width/2,height/2);
       }
    if (pantalla == 5){
    background (0);
      image (imagen5,width/3.3,0,width/1.4, 500);  
      image(imagen8,mouseX, mouseY);
+     fill(255);
+      text( text5,20,height/5);
    }  
    if (pantalla == 6){
+     background(255);
      image (imagen6,0,0,width/2, 500); 
-     image(imagen8,mouseX, mouseY);
+     image(imagen7,mouseX, mouseY);
+     fill(0);
+      text( text6, width/2,height/5);
     } 
   }
-    
- 
-
-    
  
   
   
